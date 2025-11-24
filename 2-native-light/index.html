@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>native light</title>
+    <script type="module" src="simple-hello.js"></script>
+  </head>
+  <body>
+    <h1>Native Light DOM - Simple Hello</h1>
+    <hr />
+
+    <details>
+      <summary>Templates and Slots</summary>
+
+      <h2>No slots with empty element</h2>
+      <simple-hello></simple-hello>
+
+      <hr />
+      <h2>No slots with open element</h2>
+      <simple-hello> </simple-hello>
+
+      <hr />
+      <h2>Using the default slot</h2>
+      <simple-hello>
+        <span>Everyone</span>
+      </simple-hello>
+
+      <hr />
+      <h2>Using a named slot (no whitespace)</h2>
+      <simple-hello><span slot="subject">Dev.to !</span></simple-hello>
+
+      <hr />
+      <h2>Using a named slot (whitespace)</h2>
+      <simple-hello>
+        <span slot="subject">Dev.to !</span>
+      </simple-hello>
+
+      <hr />
+      <h2>Default followed by named</h2>
+      <simple-hello>
+        <span>Everyone</span>
+        <span slot="subject">Dev.to !</span>
+      </simple-hello>
+
+      <hr />
+      <h2>Named followed by default</h2>
+      <simple-hello>
+        <span slot="subject">Dev.to !</span>
+        <span>Everyone</span>
+      </simple-hello>
+
+      <hr />
+      <h2>Default and named</h2>
+      <simple-hello>
+        <span>Everyone</span><span slot="subject">Dev.to !</span>
+      </simple-hello>
+
+      <hr />
+      <h2>Default and named (gap)</h2>
+      <simple-hello
+        ><span>Everyone</span>
+        <span slot="subject">Dev.to !</span></simple-hello
+      >
+
+      <hr />
+      <h2>Named (spaced)</h2>
+      <simple-hello>XXX<span slot="subject">Dev.to !</span>YYY</simple-hello>
+    </details>
+  </body>
+</html>

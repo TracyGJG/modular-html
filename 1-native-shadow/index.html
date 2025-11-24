@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>native shadow</title>
+    <script type="module" src="simple-hello.js"></script>
+  </head>
+  <body>
+    <h1>Native Shadow DOM - Simple Hello</h1>
+    <hr />
+
+    <details>
+      <summary>Templates and Slots</summary>
+      <h2>Default attributes, properties and slots (closed)</h2>
+      <simple-hello></simple-hello>
+
+      <hr />
+      <h2>Default attributes, properties and slots (open)</h2>
+      <simple-hello> </simple-hello>
+
+      <hr />
+      <h2>Using the default slot</h2>
+      <simple-hello>
+        <span>Everyone</span>
+      </simple-hello>
+
+      <hr />
+      <h2>Using a named slot (no whitespace)</h2>
+      <simple-hello><span slot="subject">Dev.to !</span></simple-hello>
+
+      <hr />
+      <h2>Using a named slot (whitespace)</h2>
+      <simple-hello>
+        <span slot="subject">Dev.to !</span>
+      </simple-hello>
+
+      <hr />
+      <h2>Default then named</h2>
+      <simple-hello>
+        <span>Everyone</span>
+        <span slot="subject">Dev.to !</span>
+      </simple-hello>
+
+      <hr />
+      <h2>Named then default</h2>
+      <simple-hello>
+        <span slot="subject">Dev.to !</span>
+        <span>Everyone</span>
+      </simple-hello>
+
+      <hr />
+      <h2>Default and named</h2>
+      <simple-hello>
+        <span>Everyone</span><span slot="subject">Dev.to !</span>
+      </simple-hello>
+
+      <hr />
+      <h2>Default and named (gap)</h2>
+      <simple-hello
+        ><span>Everyone</span>
+        <span slot="subject">Dev.to !</span></simple-hello
+      >
+
+      <hr />
+      <h2>Named (spaced)</h2>
+      <simple-hello>XXX<span slot="subject">Dev.to !</span>YYY</simple-hello>
+    </details>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "lit-examples",
+  "version": "1.0.0",
+  "description": "Three simple example [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components), one using the [Lit library](https://lit.dev/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lit": "^3.2.1"
+  }
+}

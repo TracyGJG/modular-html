@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>native attrs</title>
+    <script type="module" src="simple-hello.js"></script>
+  </head>
+  <body>
+    <h1>Native Attributes &amp; Properties - Simple Hello</h1>
+    <hr />
+
+    <simple-hello id="$simpleHello" who="World"></simple-hello>
+    <hr />
+
+    <br />
+    <div>
+      <button id="$btnGetAttr">Get <i>who</i> attribute</button>
+      <button id="$btnSetAttr">Set <i>who</i> attribute</button>
+      <button id="$btnGetProp">Get <i>who</i> property</button>
+      <button id="$btnSetProp">Set <i>who</i> property</button>
+    </div>
+
+    <script>
+      $btnGetAttr.addEventListener('click', () => {
+        alert($simpleHello.getAttribute('who'));
+      });
+
+      $btnSetAttr.addEventListener('click', () => {
+        $simpleHello.setAttribute('who', prompt('Who attribute?', 'Everyone'));
+      });
+
+      $btnGetProp.addEventListener('click', () => {
+        alert($simpleHello.who);
+      });
+
+      $btnSetProp.addEventListener('click', () => {
+        $simpleHello.who = prompt('Who property?', 'World');
+      });
+    </script>
+  </body>
+</html>
